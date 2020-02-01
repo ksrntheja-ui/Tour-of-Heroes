@@ -1,0 +1,2 @@
+-> You learned that Angular components display data.
+-> You used the double curly braces of interpolation to display the app title.
