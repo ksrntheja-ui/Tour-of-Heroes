@@ -45,7 +45,13 @@ export class HeroesComponent implements OnInit {
 
   getHeroes(): void {
     // error TS2339: Property 'heroService' does not exist on type 'HeroesComponent'.
-    this.heroes = this.heroService.getHeroes();
+    // ERROR Error: "Cannot find a differ supporting object '[object Object]' of type 'object'.
+    // NgFor only supports binding to Iterables such as Arrays."
+    // this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes().subscribe(
+      data => this.heroes = data
+    );
+    console.log(this.heroes);
   }
 
 }
