@@ -43,3 +43,9 @@ When the user picks a hero, selectedHero has a value and ngIf puts the hero deta
   </div>
 
 </div>-->
+
+<!--[hero]="selectedHero" is an Angular property binding.
+The two components will have a parent/child relationship.
+The parent HeroesComponent will control the child HeroDetailComponent
+by sending it a new hero to display whenever the user selects a hero from the list.-->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
