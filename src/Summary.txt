@@ -20,4 +20,24 @@ Two-way binding
 ->  You learned the importance of declaring components in the AppModule and appreciated that the CLI declared it for you.
 
 
+The *ngFor is Angular's repeater directive. It repeats the host element for each element in a list.
+  -> The syntax in this example is as follows:
+    -> <li> is the host element.
+    -> heroes holds the mock heroes list from the HeroesComponent class, the mock heroes list.
+    -> hero holds the current hero object for each iteration through the list.
+
+<li *ngFor="let hero of heroes" (click)="onSelect(hero)">
+  -> This is an example of Angular's event binding syntax.
+  -> The parentheses around click tell Angular to listen for the <li> element's click event.
+      When the user clicks in the <li>, Angular executes the onSelect(hero) expression.
+
+The Angular class binding makes it easy to add and remove a CSS class conditionally. Just add
+[class.some-css-class]="some-condition" to the element you want to style.
+
+
+-> The Tour of Heroes app displays a list of heroes in a Master/Detail view.
+-> The user can select a hero and see that hero's details.
+-> You used *ngFor to display a list.
+-> You used *ngIf to conditionally include or exclude a block of HTML.
+-> You can toggle a CSS style class with a class binding.
 
