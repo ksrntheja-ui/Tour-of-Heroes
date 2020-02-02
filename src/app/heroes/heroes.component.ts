@@ -24,10 +24,17 @@ export class HeroesComponent implements OnInit {
   // define a component property called heroes to expose the HEROES array for binding.
   heroes = HEROES;
 
+  // define a property : selectedHero
+  selectedHero: Hero;
+
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  onSelect(hero: Hero) {
+    this.selectedHero = hero;
   }
 
 }
