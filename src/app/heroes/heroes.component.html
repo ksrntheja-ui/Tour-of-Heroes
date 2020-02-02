@@ -14,7 +14,18 @@
 <h2>My Heroes</h2>
 <ul class="heroes">
   <!--To list all Heroes, add an *ngFor to the <li> to iterate through the list of heroes-->
-  <li *ngFor="let hero of heroes" (click)="onSelect(hero)" > <!-- onclick -->
+  <li *ngFor="let hero of heroes" (click)="onSelect(hero)"> <!-- onclick -->
     <span class="badge">{{ hero.id }}</span> {{ hero.name }}
   </li>
 </ul>
+
+<h2>{{ selectedHero.name | uppercase }} Details</h2>
+<div>
+  <span>id: </span>{{ selectedHero.id }}
+</div>
+<div>
+  <label>
+    name:
+    <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+  </label>
+</div>
