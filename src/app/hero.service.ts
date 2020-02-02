@@ -4,6 +4,7 @@ import {Observable, of} from 'rxjs';
 
 import {Hero} from './hero';
 import {HEROES} from './mock-heroes';
+import {MessageService} from './message.service';
 
 /*
 Browser console errors: [Compiled successfully]
@@ -23,7 +24,9 @@ ERROR NullInjectorError: "StaticInjectorError(AppModule)[HeroesComponent -> Hero
 })
 export class HeroService {
 
-  constructor() {
+  constructor(
+    private messageService: MessageService
+  ) {
   }
 
   getHeroes(): Observable<Hero[]> {
