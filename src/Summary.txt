@@ -1,6 +1,7 @@
 -> You learned that Angular components display data.
 -> You used the double curly braces of interpolation to display the app title.
 
+
 Two-way binding
   -> Users should be able to edit the hero name in an <input> textbox.
   -> The textbox should both display the hero's name property and
@@ -9,3 +10,14 @@ Two-way binding
       from the screen back to the class.
   -> To automate that data flow, setup a two-way data binding between the <input> form element and the hero.name property.
   -> [(ngModel)] is Angular's two-way data binding syntax.
+
+-> You used the CLI to create a second HeroesComponent.
+->  You displayed the HeroesComponent by adding it to the AppComponent shell.
+->  You applied the UppercasePipe to format the name.
+->  You used two-way data binding with the ngModel directive.
+->  You learned about the AppModule.
+->  You imported the FormsModule in the AppModule so that Angular would recognize and apply the ngModel directive.
+->  You learned the importance of declaring components in the AppModule and appreciated that the CLI declared it for you.
+
+
+
