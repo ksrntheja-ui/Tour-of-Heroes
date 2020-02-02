@@ -11,7 +11,7 @@ export class HeroesComponent implements OnInit {
   // hero = 'Windstorm';
 
   // Refactor the component's hero property to be of type Hero.
-  hero: Hero = {
+  hero: Hero = { // ERROR in src/app/heroes/heroes.component.ts:14:9 - error TS2304: Cannot find name 'Hero'.
     id: 1,
     name: 'Windstorm'
   };
