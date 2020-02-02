@@ -1,2 +1,11 @@
 -> You learned that Angular components display data.
 -> You used the double curly braces of interpolation to display the app title.
+
+Two-way binding
+  -> Users should be able to edit the hero name in an <input> textbox.
+  -> The textbox should both display the hero's name property and
+      update that property as the user types.
+      That means data flows from the component class out to the screen and
+      from the screen back to the class.
+  -> To automate that data flow, setup a two-way data binding between the <input> form element and the hero.name property.
+  -> [(ngModel)] is Angular's two-way data binding syntax.
