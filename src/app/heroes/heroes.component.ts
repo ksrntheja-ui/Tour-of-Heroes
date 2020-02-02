@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
 import {Hero} from '../hero';
-import {HEROES} from '../mock-heroes';
 // TS2305: Module '"../hero.service"' has no exported member 'HeroService'.
 import {HeroService} from '../hero.service';
 
@@ -24,13 +23,14 @@ export class HeroesComponent implements OnInit {
    */
 
   // define a component property called heroes to expose the HEROES array for binding.
-  heroes = HEROES;
+  // heroes = HEROES;
+  heroes;
 
   // define a property : selectedHero
   selectedHero: Hero;
 
   constructor(
-    private heroService: HeroService
+    heroService: HeroService
   ) {
   }
 
@@ -40,6 +40,11 @@ export class HeroesComponent implements OnInit {
   onSelect(hero: Hero) {
     console.log(hero);
     this.selectedHero = hero;
+  }
+
+  getHeroes(): void {
+    // error TS2339: Property 'heroService' does not exist on type 'HeroesComponent'.
+    this.heroes = this.heroService.getHeroes();
   }
 
 }
