@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 
 import {Hero} from '../hero';
 import {HEROES} from '../mock-heroes';
+// TS2305: Module '"../hero.service"' has no exported member 'HeroService'.
+import {HeroService} from '../hero.service';
 
 @Component({
   selector: 'app-heroes',
