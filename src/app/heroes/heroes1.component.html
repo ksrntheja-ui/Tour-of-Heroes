@@ -1,0 +1,31 @@
+<!-- {{ hero }} -->
+
+<!-- Update the binding in the template to announce the hero's name and
+show both id and name in a details layout -->
+<!--<h2>{{ hero.name }} Details</h2>-->
+
+<!--The word uppercase in the interpolation binding,
+right after the pipe operator ( | ), activates the built-in UppercasePipe.-->
+<h2>{{ hero.name | uppercase }} Details</h2>
+<div>
+  <span>id: </span>{{ hero.id }}
+</div>
+<div>
+  <!--<span>name: </span>{{ hero.name }}-->
+
+  <!--setup a two-way data binding between the <input> form element and the hero.name property.-->
+  <label>
+    name:
+    <!--<input placeholder="name"/>-->
+    <!-- Added two-way data syntax :  [(ngModel)] is Angular's two-way data binding syntax.-->
+    <!-- Here it binds the hero.name property to the HTML textbox
+    so that data can flow in both directions:
+    from the hero.name property to the textbox, and
+    from the textbox back to the hero.name. -->
+    <!--Error: Template parse errors:
+    Can't bind to 'ngModel' since it isn't a known property of 'input'.-->
+    <!--Although ngModel is a valid Angular directive, it isn't available by default.
+    It belongs to the optional FormsModule and you must opt-in to using it.-->
+    <input [(ngModel)]="hero.name" placeholder="name"/>
+  </label>
+</div>
