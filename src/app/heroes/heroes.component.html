@@ -13,7 +13,8 @@
 
 <h2>My Heroes</h2>
 <ul>
-  <li>
+  <!--To list all Heroes, add an *ngFor to the <li> to iterate through the list of heroes-->
+  <li *ngFor="let hero of heroes">
     <span>{{ hero.id }}</span> {{ hero.name }}
   </li>
 </ul>
