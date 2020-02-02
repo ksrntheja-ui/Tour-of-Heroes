@@ -19,13 +19,27 @@
   </li>
 </ul>
 
-<h2>{{ selectedHero.name | uppercase }} Details</h2>
-<div>
-  <span>id: </span>{{ selectedHero.id }}
-</div>
-<div>
-  <label>
-    name:
-    <input [(ngModel)]="selectedHero.name" placeholder="name"/>
-  </label>
+<!--ERROR TypeError: "_co.selectedHero is undefined"
+
+When the app starts, the selectedHero is undefined by design.
+Binding expressions in the template that refer to properties of selectedHero—expressions like {{selectedHero.name}}
+—must fail because there is no selected hero.
+The fix - hide empty details with *ngIf
+The component should only display the selected hero details if the selectedHero exists.
+Why it works
+When selectedHero is undefined, the ngIf removes the hero detail from the DOM. There are no selectedHero bindings to consider.
+When the user picks a hero, selectedHero has a value and ngIf puts the hero detail into the DOM.-->
+<div *ngIf="selectedHero">
+
+  <h2>{{ selectedHero.name | uppercase }} Details</h2>
+  <div>
+    <span>id: </span>{{ selectedHero.id }}
+  </div>
+  <div>
+    <label>
+      name:
+      <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+    </label>
+  </div>
+
 </div>
